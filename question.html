@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Question </title>
+    <link rel="stylesheet" type="text/css" href="CodeJustice.css">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            padding-left: 320px;
+            font-size: 35px;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            padding-left: 320px;
+            font-size: 30px;
+        }
+
+        .accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 30px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+        .head{
+            height: 120px;
+            width: 100%;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            background-color: brown;
+            text-align: center;
+          
+
+        }
+        .head1{
+            height: 80px;
+            width: 800px;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            background-color: brown;
+            text-align: center;
+            position: absolute;
+            top: 15px;
+            right: 235px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <link rel="stylesheet" href="nav box.css"> -->
+    </head>
+
+    <body>
+        <div class="sliderbar">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icon"><!--<ion-icon name="finger-print-outline">--></ion-icon></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon icon1">
+                            <div class="imagepro">
+                                <img class="imagepro" src="profileimage.jpeg" height="30px"
+                                    width="30px">
+                            </div>
+                        </span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="CodeJustice.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="ticket-outline"></ion-icon></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;UnderWay</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="gift-outline"></ion-icon></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Rewards</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Setting</span>
+                    </a>
+                </li>
+                <div class="bottom">
+
+                    <li>
+                        <a href="">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="head"><div class="head1">Frequently Asked Questions</div></div>
+        <button class="accordion">How can I create an account on Code Justice?</button>
+        <div class="panel">
+            <p>Go to the home page, on the top right hand corner there is a sign up/login option from there you can create new account or link google account.
+            </p>
+        </div>
+
+        <button class="accordion">How will transparency and accountability be ensured in the services provided by legal service providers on the platform?</button>
+        <div class="panel">
+            <p>Transparency and accountability can be ensured by implementing features such as clear pricing, client reviews, service agreements, and monitoring mechanisms to track the quality and timeliness of services.
+            </p>
+        </div>
+
+        <button class="accordion"> How will the quality of legal services be monitored on the platform?</button>
+        <div class="panel">
+            <p>Quality can be monitored through client feedback, reviews, and ratings. Legal service providers can be encouraged to maintain high-quality standards to receive positive feedback and incentives.</p>
+        </div>
+        <button class="accordion">Is my personal and professional information secure on Code Justice?</button>
+        <div class="panel">
+            <p> All the information is secure on the website as it is end-to-end encrypted.</p>
+        </div>
+        <button class="accordion"> How do I search for specific legal information on ?</button>
+        <div class="panel">
+            <p>There is a search bar provided on the home page where you can serach the details.</p>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+
+</html>
